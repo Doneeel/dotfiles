@@ -55,10 +55,10 @@ prompt_segment() {
   [[ -n $2 ]] && fg="%F{$2}" || fg="%f"
 
   if [[ $CURRENT_BG != 'NONE' && $1 != $CURRENT_BG ]]; then
-    print -n " %{$bg%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR%{$fg%} "
+    print -n "%{$bg%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR%{$fg%} "
 
   else
-    print -n "╭─ %{$bg%}%{$fg%} "
+    print -n "%{$bg%}%{$fg%} "
   fi
   CURRENT_BG=$1
   [[ -n $3 ]] && echo -n $3
@@ -75,7 +75,7 @@ prompt_end() {
 
   print -n "%{%f%}"
   CURRENT_BG='' 
-  printf "\n╰─"
+  printf "\n>"
 }
 ### Prompt components
 # Each component will draw itself, and hide itself if no information needs to be shown
