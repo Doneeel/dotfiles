@@ -1,0 +1,5 @@
+.ssh/
+.local/
+.shell.pre-oh-my-zsh
+.gitconfig
+.zsh_history
